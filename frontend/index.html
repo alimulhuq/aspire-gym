@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fitoo - Daily Workouts & Fitness Programs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="logo">Fitoo</div>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle"/>
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="programs.html">Programs</a>
+        <a href="price.html">Pricing</a>
+        <a href="about.html">About us</a>
+        <a href="signup.html" class="btn-signup mobile-signup">Sign Up</a>
+      </nav>
+
+      <a href="#" class="btn-signup desktop-signup">Sign Up</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <h1>Get daily <span>workouts</span><br>with <span>Fitoo heroes</span></h1>
+            <div class="hero-buttons">
+              <a href="#" class="btn btn-primary">Get Started <span>→</span></a>
+              <a href="#" class="btn btn-outline">Play Video</a>
+            </div>
+          </div>
+
+          <div class="hero-image-wrapper">
+            <img 
+              src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&auto=format&fit=crop&q=80" 
+              alt="Muscular man doing dumbbell shoulder press"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="programs">
+      <div class="container">
+        <h2>Build your best body</h2>
+        <p class="section-subtitle">Our Programs</p>
+
+        <div class="program-cards">
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-dumbbell"></i></div>
+            <h3>Body Building</h3>
+            <p>Comprehensive muscle-building plans for all levels</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-biceps"></i></div>
+            <h3>Arm Building</h3>
+            <p>Targeted routines for bigger, stronger arms</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-utensils"></i></div>
+            <h3>Fatloss Guide</h3>
+            <p>Nutrition + training system to reveal your definition</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
