@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aspire • My Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="userDashboard.css">
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar – user navigation -->
+        <aside class="sidebar">
+            <div class="logo">Aspire</div>
+
+            <nav class="nav">
+                <a href="#" class="nav-item active">
+                    <i class="fas fa-home"></i>
+                    Dashboard
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-dumbbell"></i>
+                    My Workouts
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-chart-line"></i>
+                    Progress
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-utensils"></i>
+                    Nutrition
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-trophy"></i>
+                    Achievements
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-users"></i>
+                    Community
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-cog"></i>
+                    Settings
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-mini">
+                    <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=150&h=150&fit=crop&crop=faces" alt="Your profile">
+                    <div class="user-info">
+                        <h4>helu</h4>
+                        <p>Premium Member</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main user content -->
+        <main class="main-content">
+
+            <header class="welcome-header">
+                <div class="welcome-text">
+                    <h1>Hey helu 👋</h1>
+                    <p class="welcome-subtitle">Let's make today stronger than yesterday</p>
+                </div>
+
+                <button class="btn-start-workout">
+                    <i class="fas fa-play"></i>
+                    Start Today's Workout
+                </button>
+            </header>
+
+            <!-- Quick overview cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-fire-flame-curved"></i></div>
+                    <div class="stat-value">1,842</div>
+                    <div class="stat-label">kcal burned today</div>
+                    <div class="stat-change positive">
+                        <i class="fas fa-arrow-up"></i> +12%
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-stopwatch"></i></div>
+                    <div class="stat-value">47<span>min</span></div>
+                    <div class="stat-label">Active time today</div>
+                    <div class="stat-change positive">
+                        <i class="fas fa-arrow-up"></i> +11 min
+                    </div>
+                </div>
+
+                <div class="stat-card streak-card">
+                    <div class="stat-icon"><i class="fas fa-fire"></i></div>
+                    <div class="stat-value">19</div>
+                    <div class="stat-label">Day streak</div>
+                    <div class="streak-message">You're unstoppable! 🔥</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-weight-scale"></i></div>
+                    <div class="stat-value">−2.1<span>kg</span></div>
+                    <div class="stat-label">This month</div>
+                    <div class="stat-change positive">
+                        <i class="fas fa-arrow-down"></i> Great progress
+                    </div>
+                </div>
+            </div>
+
+            <!-- Today's plan / recent activity -->
+            <section class="today-plan">
+                <h2 class="section-title">Today's Recommended Plan</h2>
+                <div class="plan-card">
+                    <div class="plan-info">
+                        <h3>Upper Body Strength • Level Intermediate</h3>
+                        <div class="plan-meta">
+                            <span><i class="far fa-clock"></i> ~55 min</span>
+                            <span><i class="fas fa-dumbbell"></i> 6 exercises</span>
+                            <span><i class="fas fa-fire"></i> ~480–620 kcal</span>
+                        </div>
+                    </div>
+                    <button class="btn-start">Start Now</button>
+                </div>
+            </section>
+
+            <section class="recent-section">
+                <h2 class="section-title">Recent Activity</h2>
+
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-left">
+                            <h3>Shoulders & Arms</h3>
+                            <div class="activity-meta">Yesterday • 51 min • Completed</div>
+                        </div>
+                        <span class="status completed">Completed</span>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-left">
+                            <h3>Legs & Core</h3>
+                            <div class="activity-meta">2 days ago • 58 min • Completed</div>
+                        </div>
+                        <span class="status completed">Completed</span>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-left">
+                            <h3>Active Recovery • Mobility</h3>
+                            <div class="activity-meta">3 days ago • 32 min • Completed</div>
+                        </div>
+                        <span class="status completed">Completed</span>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        // Very basic mobile sidebar toggle (hamburger)
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.createElement('button');
+            hamburger.className = 'hamburger';
+            hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            document.querySelector('.welcome-header').prepend(hamburger);
+
+            hamburger.addEventListener('click', () => {
+                document.querySelector('.sidebar').classList.toggle('open');
+                const icon = hamburger.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            });
+
+            // Close on outside click (mobile)
+            document.addEventListener('click', e => {
+                if (window.innerWidth > 768) return;
+                const sidebar = document.querySelector('.sidebar');
+                if (!sidebar.contains(e.target) && !hamburger.contains(e.target)) {
+                    sidebar.classList.remove('open');
+                    hamburger.querySelector('i').classList.replace('fa-times', 'fa-bars');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
